@@ -23,10 +23,12 @@ const styles = StyleSheet.create({
     borderColor: 'red'
   },
   textTwoStyle:{
+    backgroundColor: 'red',
     borderWidth: 3,
     borderColor: 'red',
     fontSize: 18,
-    top: 10
+    position: 'absolute',
+    ...StyleSheet.absoluteFillObject
   },
   textThreeStyle:{
     borderWidth: 3,
