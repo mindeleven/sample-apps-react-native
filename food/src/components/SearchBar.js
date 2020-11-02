@@ -10,7 +10,7 @@ const SearchBar = ({ term, onTermChange }) => {
         style={styles.inputStyle}
         placeholder="Search"
         value={term}
-        onTextChange={(newTerm) => onTermChange(newTerm)}
+        onChangeText={(newTerm) => onTermChange(newTerm)}
       />
     </View>
   );
