@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import IndexScreen from './src/screens/IndexScreen';
 
 const navigator = createStackNavigator({
-  Search: IndexScreen
+  Index: IndexScreen
 }, {
   initialRouteName: 'Index',
   defaultNavigationOptions: {
