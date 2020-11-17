@@ -38,10 +38,12 @@ const IndexScreen = ({ navigation }) => {
   )
 }
 
-IndexScreen.navigationOptions = () => {
+IndexScreen.navigationOptions = ({ navigation }) => {
   return {
     headerRight: () => (
-      <Feather name="plus" size={30} />
+      <TouchableOpacity onPress={() => navigation.navigate('Create')}>
+        <Feather name="plus" size={30} />
+      </TouchableOpacity>
     )
   };
 };
