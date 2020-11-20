@@ -18,7 +18,7 @@ const ShowScreen = ({ navigation }) => {
   );
 };
 
-IndexScreen.navigationOptions = ({ navigation }) => {
+ShowScreen.navigationOptions = ({ navigation }) => {
   return {
     headerRight: () => (
       <TouchableOpacity>
