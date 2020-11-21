@@ -22,8 +22,7 @@ const BlogPostForm = () => {
       />
       <Button
         title="Save Blog Post"
-        onPress={() => {});
-        }}
+        onPress={() => {}}
       />
     </View>
   );
