@@ -43,6 +43,7 @@ const editBlogPost = (dispatch) => {
       type: 'edit_blogpost',
       payload: {id: id, title: title, content: content}
     });
+    
     if (callback) {
       callback();
     }
