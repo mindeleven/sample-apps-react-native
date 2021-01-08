@@ -23,7 +23,7 @@ mongoose.connection.on('error', (err) => {
   console.error('Error connecting to mongo instance', err);
 });
 
-app.get('/', (req, res) => {
+app.get('/', requireAuth, (req, res) => {
   res.send('Hi there!');
 });
 
