@@ -13,20 +13,21 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-userSchema.pre('save', function() {
+userSchema.pre('save', function(next) {
   const user = this;
+  
   if(!user.isModified('password')) {
     return next();
   }
 
   bcrypt.genSalt(10, (err, salt) => {
     if(err) {
-      next(err);
+      return next(err);
     }
 
     bcrypt.hash(user.password, salt, (err, hash) => {
       if(err) {
-        next(err);
+        return next(err);
       }
       user.password = hash;
       next();
@@ -42,7 +43,7 @@ userSchema.methods.comparePasswords = function(candidatePasswort) {
     if(err) {
       return reject(err);
     }
-    
+
     if(!isMatch) {
       return reject(false);
     }
