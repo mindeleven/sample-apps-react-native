@@ -1,4 +1,5 @@
 require('./models/user');
+require('./models/track');
 const express    = require('express');
 const mongoose   = require('mongoose');
 const bodyParser = require('body-parser');
