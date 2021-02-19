@@ -15,12 +15,16 @@ const SignupScreen = ({ navigation }) => {
       label="Email"
       value={email}
       onChangeText={(newEmail) => setEmail(newEmail)}
+      autoCapitalize="none"
+      autoCorrect={false}
     />
     <Spacer />
     <Input
       label="Password"
       value={password}
-      onChangeText={(newPassword) => setPassword(newPassword)} 
+      onChangeText={(newPassword) => setPassword(newPassword)}
+      autoCapitalize="none"
+      autoCorrect={false}
     />
     <Spacer>
       <Button
