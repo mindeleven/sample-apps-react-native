@@ -20,6 +20,7 @@ const SignupScreen = ({ navigation }) => {
     />
     <Spacer />
     <Input
+      secureTextEntry
       label="Password"
       value={password}
       onChangeText={(newPassword) => setPassword(newPassword)}
