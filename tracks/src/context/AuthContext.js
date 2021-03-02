@@ -18,7 +18,10 @@ const signup = (dispatch) => {
       const response = await trackerApi.post('/signup', { email, password });
       console.log(response.data);
     } catch (err) {
-      console.log(err.response.data);
+      dispatch({
+        type: 'add_error',
+        payload: 'Something went wrong with sign up'
+      });
     }
   };
 };
