@@ -10,13 +10,16 @@ const authReducer = (state, action) => {
 
 const signup = (dispatch) => {
   return ({ email, password }) => {
-    // make api request to signup with email and password
-
-    // if we sign up, modify our state
+    // (1) make api request to signup with email and password
+    // (2) if we sign up, modify our state
     // and say that we're authenticated
-
-    // if sign in fails, reflect error message
-
+    // (3) if sign in fails, reflect error message
+    try {
+      const responese = trackerApi.post('/signup', { email, password });
+      console.log(response.data);
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 };
 
