@@ -15,10 +15,10 @@ const signup = (dispatch) => {
     // and say that we're authenticated
     // (3) if sign in fails, reflect error message
     try {
-      const responese = await trackerApi.post('/signup', { email, password });
+      const response = await trackerApi.post('/signup', { email, password });
       console.log(response.data);
     } catch (err) {
-      console.log(err.message);
+      console.log(err.response.data);
     }
   };
 };
