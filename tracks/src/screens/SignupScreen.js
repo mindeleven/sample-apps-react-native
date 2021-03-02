@@ -29,6 +29,9 @@ const SignupScreen = ({ navigation }) => {
       autoCapitalize="none"
       autoCorrect={false}
     />
+    {state.errorMessage ? (
+      <Text style={styles.errorMessage}>{state.errorMessage}</Text>
+    ) : null}
     <Spacer>
       <Button
         title="Sign Up"
@@ -50,6 +53,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: 100
   },
+  errorMessage: {
+    fontSize: 16,
+    color: 'red',
+    marginLeft: 15,
+    marginTop: 5
+  }
 });
 
 export default SignupScreen;
