@@ -2,7 +2,7 @@ import createDataContext from './createDataContext';
 import trackerApi from '../api/tracker';
 
 const authReducer = (state, action) => {
-  switch (action, type) {
+  switch (action.type) {
     case 'add_error':
       return { ...state, errorMessage: action.payload }
     default:
