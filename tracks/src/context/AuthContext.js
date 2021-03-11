@@ -16,6 +16,16 @@ const authReducer = (state, action) => {
   }
 };
 
+const tryLocalSignin = dispatch => async () => {
+  const token = AsyncStorage.getItem('token');
+  if (token) {
+    dispatch({ type: 'signin', payload: token });
+    navigate('TrackList');
+  } else {
+    navigate('loginFlow');
+  }
+}
+
 const clearErrorMessage = dispatch => () => {
   dispatch({ type: 'clear_error_message'});
 };
