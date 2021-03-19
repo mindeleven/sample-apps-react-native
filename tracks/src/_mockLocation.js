@@ -19,9 +19,9 @@ const getLocation = increment => {
 
 let counter = 0;
 
-setIntervall(() => {
+setInterval(() => {
   Location.EventEmitter.emit('Expo.locationChanged', {
-    watchId: Location:_getCurrentWatchId(),
+    watchId: Location._getCurrentWatchId(),
     location: getLocation(counter)
   });
   counter++;
