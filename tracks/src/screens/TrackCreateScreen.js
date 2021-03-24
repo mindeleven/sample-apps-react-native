@@ -19,7 +19,7 @@ const TrackCreateScreen = () => {
         timeInterval: 1000,
         distanceInterval: 10
       }, (location) => {
-        console.log(location);
+        addLocation(location);
       });
     } catch (e) {
       setErr(e);
